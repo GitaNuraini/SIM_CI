@@ -86,8 +86,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span>Transaksi</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="asset/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Penjualan</a></li>
-            <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Piutang</a></li>
+              <li><a href="<?php echo base_url('sim/penjualan') ?>"> Penjualan</a></li>
+              <li><a href="<?php echo base_url('sim/piutang') ?>"> Piutang</a></li>
+<!--
+            <li><a href="./index.php?index=<?php echo md5("penjualan");?>"><i class="fa fa-circle-o"></i> Penjualan</a></li>
+            <li><a href="./index.php?index=<?php echo md5("piutang");?>"><i class="fa fa-circle-o"></i> Piutang</a></li>
+-->
           </ul>
         </li>
         <li>
