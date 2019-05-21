@@ -66,18 +66,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"><i class="fa fa-th"></i><span><font size="4pt">HOME</font></span></li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Data Master</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="asset/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Data Barang</a></li>
-            <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Data Kasir</a></li>
-              <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Data Kategori</a></li>
-              <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Data Satuan</a></li>
-              <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Data Supplier</a></li>
-              <li><a href="assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Data Reseller</a></li>
+            <li><a href="<?php echo base_url('asset/pages/layout/top-nav.html')?>"><i class="fa fa-circle-o"></i> Data Barang</a></li>
+            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Kasir</a></li>
+            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Kategori</a></li>
+            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Satuan</a></li>
+            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Supplier</a></li>
+            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Reseller</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -86,8 +86,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span>Transaksi</span>
           </a>
           <ul class="treeview-menu">
-              <li><a href="<?php echo base_url('sim/penjualan') ?>"> Penjualan</a></li>
-              <li><a href="<?php echo base_url('sim/piutang') ?>"> Piutang</a></li>
+              <li><a href="<?php echo base_url('index.php/sim/penjualan') ?>"><i class="fa fa-circle-o"></i> Penjualan</a></li>
+              <li><a href="<?php echo base_url('idex.php/sim/piutang') ?>"><i class="fa fa-circle-o"></i> Piutang</a></li>
 <!--
             <li><a href="./index.php?index=<?php echo md5("penjualan");?>"><i class="fa fa-circle-o"></i> Penjualan</a></li>
             <li><a href="./index.php?index=<?php echo md5("piutang");?>"><i class="fa fa-circle-o"></i> Piutang</a></li>
