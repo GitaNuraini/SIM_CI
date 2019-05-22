@@ -72,12 +72,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span>Data Master</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('asset/pages/layout/top-nav.html')?>"><i class="fa fa-circle-o"></i> Data Barang</a></li>
-            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Kasir</a></li>
-            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Kategori</a></li>
-            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Satuan</a></li>
-            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Supplier</a></li>
-            <li><a href="<?php echo base_url ('assets/pages/layout/boxed.html')?>"><i class="fa fa-circle-o"></i> Data Reseller</a></li>
+            <li><a href="<?php echo base_url('index.php/sim/barang')?>"><i class="fa fa-circle-o"></i> Data Barang</a></li>
+            <li><a href="<?php echo base_url ('index.php/sim/kasir')?>"><i class="fa fa-circle-o"></i> Data Kasir</a></li>
+            <li><a href="<?php echo base_url ('index.php/sim/kategori')?>"><i class="fa fa-circle-o"></i> Data Kategori</a></li>
+            <li><a href="<?php echo base_url ('index.php/sim/satuan')?>"><i class="fa fa-circle-o"></i> Data Satuan</a></li>
+            <li><a href="<?php echo base_url ('index.php/sim/supplier')?>"><i class="fa fa-circle-o"></i> Data Supplier</a></li>
+            <li><a href="<?php echo base_url ('index.php/sim/reseller')?>"><i class="fa fa-circle-o"></i> Data Reseller</a></li>
           </ul>
         </li>
         <li class="treeview">
