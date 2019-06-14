@@ -1,11 +1,3 @@
-<!-- DataTables -->
-<!--<link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">-->
-<!--
-
-<section class="content-header">
-    <h1><b>Master Barang</b></h1>
-</section>
--->
     <!-- Main content -->
 <section class="content">
     <div class="row">
