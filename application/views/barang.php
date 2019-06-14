@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<?php $this->load->view("admin/_partials/head.php") ?>
-</head>
-
-<body id="page-top">
-
-	<?php $this->load->view("admin/_partials/navbar.php") ?>
-	<div id="wrapper">
-
-		<?php $this->load->view("admin/_partials/sidebar.php") ?>
-
-		<div id="content-wrapper">
-
-			<div class="container-fluid">
-
-				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
-
-				<!-- DataTables -->
-				<div class="card mb-3">
-					<div class="card-header">
-						<a href="<?php echo site_url('form/tambah_barang') ?>"><i class="fas fa-plus"></i> Add New</a>
-					</div>
-					<div class="card-body">
-
-						<div class="table-responsive">
-							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-								<thead>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">            
+        <table>
+            <tr>
+                <td><h1 class="box-title"><font size="6px" face="impact" color="#3c8dbc">Data Barang</font></h1></td>
+                <td width="2%">&nbsp;</td>
+                <td><img src="<?php echo base_url('assets/images/add_ss.PNG');?>" alt=""></td>
+                <td width="65%">&nbsp;</td>
+            </tr>
+        </table>
+                    <a style="margin-bottom:10px" href="fpdf/lap_barang.php" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Cetak</a>
+                </div>
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                       <thead>
 									<tr>
 										<th>ID Barang</th>
 										<th>Nama Barang</th>
 										<th>Kategori</th>
+										<th>Satuan</th>
 										<th>Hrg Pokok(Rp)</th>
 										<th>Hrg Umum(Rp)</th>
 										<th>Hrg Reseller(Rp)</th>
@@ -41,52 +30,29 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($data_barang as $data): ?>
+									<?php foreach ($barang as $data): ?>
 									<tr>
-										<td width="150">
-											<?php echo $product->name ?>
-										</td>
-										<td>
-											<?php echo $product->price ?>
-										</td>
-										<td>
-											<img src="<?php echo base_url('upload/product/'.$product->image) ?>" width="64" />
-										</td>
-										<td class="small">
-											<?php echo substr($product->description, 0, 120) ?>...</td>
-										<td width="250">
-											<a href="<?php echo site_url('admin/products/edit/'.$product->product_id) ?>"
+										<td width="150"><?php echo $data->Nama_barang ?></td>
+										<td><?php echo $data->Id_kategori ?></td>
+										<td><?php echo $data->Id_satuan ?></td>
+										<td><?php echo $data->Hrg_pokok ?></td>
+										<td><?php echo $data->Hrg_umum ?></td>
+										<td><?php echo $data->Hrg_reseller ?></td>
+										<td><?php echo $data->Stock ?></td>
+                                        <td><?php echo $data->Expired ?></td>
+                                        <td width="250">
+											<a href="<?php echo site_url('form/edit_barang'.$data_barang->id_barang) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$product->product_id) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('delete'.$data_barang->id_barang) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
 									<?php endforeach; ?>
 
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!-- /.container-fluid -->
-
-			<!-- Sticky Footer -->
-			<?php $this->load->view("admin/_partials/footer.php") ?>
-
-		</div>
-		<!-- /.content-wrapper -->
-
-	</div>
-	<!-- /#wrapper -->
-
-
-	<?php $this->load->view("admin/_partials/scrolltop.php") ?>
-	<?php $this->load->view("admin/_partials/modal.php") ?>
-
-	<?php $this->load->view("admin/_partials/js.php") ?>
-
-</body>
-
-</html>
+								</tbody>>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

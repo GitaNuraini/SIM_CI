@@ -29,7 +29,7 @@ class Sim extends CI_Controller {
 	}
     public function barang()
 	{
-        $this->load->view('header');
+//        $this->load->view('header');
         $this->load->view('barang');
         $this->load->view('footer');
 	}

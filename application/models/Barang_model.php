@@ -15,9 +15,6 @@ class Barang_model extends CI_Model {
 
     public function rules(){
         return [
-            ['field' => 'nama_barang',
-            'label' => 'Nama_barang',
-            'rules' => 'required'],
             
             ['field' => 'nama_barang',
             'label' => 'Nama_barang',
@@ -90,7 +87,7 @@ class Barang_model extends CI_Model {
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("id_barang" => $id_barang));
+        return $this->db->delete($this->_table, array("id_barang" => $id));
     }
 }
 
