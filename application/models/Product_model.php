@@ -2,28 +2,48 @@
 
 class Product_model extends CI_Model
 {
-    private $_table = "products"; //nama tabel
+    private $_table = "data_barang"; //nama tabel
 
     // nama kolom di tabel,harus sama huruf besar dan huruf kecilnya!
-    public $product_id;
-    public $name;
-    public $price;
-    public $image = "default.jpg";
-    public $description;
+    public $id_barang;
+    public $nama_barang;
+    public $id_kategori;
+    public $id_satuan;
+    public $hrg_pokok;
+    public $hrg_umum;
+    public $hrg_reseller;
+    public $stock;
+    public $expired;
 
     public function rules()
     {
         return [
-            ['field' => 'name',
-            'label' => 'Name',
+            ['field' => 'nama_barang',
+            'label' => 'Nama_barang',
             'rules' => 'required'],
 
-            ['field' => 'price',
-            'label' => 'Price',
-            'rules' => 'numeric'],
+            ['field' => 'id_kategori',
+            'label' => 'Id_kategori',
+            'rules' => 'required'],
             
-            ['field' => 'description',
-            'label' => 'Description',
+            ['field' => 'id_satuan',
+            'label' => 'Id_satuan',
+            'rules' => 'required'],
+            
+            ['field' => 'hrg_pokok',
+            'label' => 'Hrg_pokok',
+            'rules' => 'required'],
+            
+            ['field' => 'hrg_umum',
+            'label' => 'Hrg_umum',
+            'rules' => 'required'],
+            
+            ['field' => 'hrg_reseller',
+            'label' => 'Hrg_reseller',
+            'rules' => 'required'],
+            
+            ['field' => 'stock',
+            'label' => 'Stock',
             'rules' => 'required']
         ];
     }
@@ -35,16 +55,20 @@ class Product_model extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["product_id" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_barang" => $id])->row();
     }
 
     public function save()
     {
         $post = $this->input->post();
-        $this->product_id = uniqid();
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
+        $this->id_barang = uniqid();
+        $this->nama_barang = $post["nama_barang"];
+        $this->id_kategori = $post["id_kategori"];
+        $this->id_satuan = $post["hrg_pokok"];
+        $this->id_satuan = $post["hrg_umum"];
+        $this->id_satuan = $post["hrg_reseller"];
+        $this->id_satuan = $post["stock"];
+        $this->id_satuan = $post["expired"];
         $this->db->insert($this->_table, $this);
     }
 

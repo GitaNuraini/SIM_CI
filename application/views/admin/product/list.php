@@ -29,31 +29,31 @@
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Price</th>
-										<th>Photo</th>
-										<th>Description</th>
-										<th>Action</th>
+										<th>Nama Barang</th>
+										<th>Hrg Pokok</th>
+										<th>Hrg Umum</th>
+										<th>hrg Reseller</th>
+										<th>Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($products as $product): ?>
+									<?php foreach ($data_barang as $row): ?>
 									<tr>
 										<td width="150">
-											<?php echo $product->name ?>
+											<?php echo $row->nama_barang ?>
 										</td>
 										<td>
-											<?php echo $product->price ?>
+											<?php echo $row->hrg_pokok ?>
 										</td>
 										<td>
-											<img src="<?php echo base_url('upload/product/'.$product->image) ?>" width="64" />
+											<?php echo $row->hrg_umum ?>
 										</td>
 										<td class="small">
-											<?php echo substr($product->description, 0, 120) ?>...</td>
+											<?php echo $row->hrg_reseller ?></td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/products/edit/'.$product->product_id) ?>"
+											<a href="<?php echo site_url('admin/products/edit/'.$row->id_barang) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$product->product_id) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$row->id_barang) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
