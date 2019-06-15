@@ -20,11 +20,9 @@
 
 				<!-- DataTables -->
 				<div class="card mb-3">
-					<div class="card-header">
-						<a href="<?php echo site_url('admin/kasir_controller/add') ?>"><i class="fas fa-plus"></i> Add New</a>
-					</div>
 					<div class="card-body">
 
+<!--
 						<div class="table-responsive">
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
@@ -71,6 +69,7 @@
 								</tbody>
 							</table>
 						</div>
+-->
 					</div>
 				</div>
 

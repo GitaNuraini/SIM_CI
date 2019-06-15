@@ -19,16 +19,16 @@ class Kasir_controller extends CI_Controller
 
     public function add()
     {
-        $product = $this->product_model;
+        $kasir = $this->kasir_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($kasir->rules());
 
         if ($validation->run()) {
-            $product->save();
+            $kasir->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $this->load->view("admin/product/new_form_");
+        $this->load->view("admin/kasir/new_form");
     }
 
     public function edit($id = null)
