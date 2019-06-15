@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product_model extends CI_Model
+class Kasir_model extends CI_Model
 {
     private $_table = "kasir"; //nama tabel
 
@@ -47,29 +47,31 @@ class Product_model extends CI_Model
     public function save()
     {
         $post = $this->input->post();
-        $this->id_barang = uniqid();
-        $this->nama_barang = $post["nama_barang"];
-        $this->id_kategori = $post["id_kategori"];
-        $this->id_satuan = $post["hrg_pokok"];
-        $this->id_satuan = $post["hrg_umum"];
-        $this->id_satuan = $post["hrg_reseller"];
-        $this->id_satuan = $post["stock"];
-        $this->id_satuan = $post["expired"];
+        $this->id_kasir = uniqid();
+        $this->nama_kasir = $post["nama_barang"];
+        $this->alamat = $post["alamat"];
+        $this->telp = $post["telp"];
+        $this->posisi = $post["posisi"];
+        $this->username = $post["username"];
+        $this->password = $post["password"];
         $this->db->insert($this->_table, $this);
     }
 
     public function update()
     {
         $post = $this->input->post();
-        $this->product_id = $post["id"];
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        $this->db->update($this->_table, $this, array('id_barang' => $post['id']));
+        $this->id_kasir = $post["id_kasir"];
+        $this->nama_kasir = $post["nama_kasir"];
+        $this->alamat = $post["alamat"];
+        $this->telp = $post["telp"];
+        $this->posisi =$post["posisi"];
+        $this->username =$post["username"];
+        $this->password =$post["password"];
+        $this->db->update($this->_table, $this, array('id_kasir' => $post['id_kasir']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("id_barang" => $id));
+        return $this->db->delete($this->_table, array("id_kasir" => $id));
     }
 }
