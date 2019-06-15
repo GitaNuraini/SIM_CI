@@ -19,7 +19,21 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-body">
-                            penjualan
+                        <font size="5px" color="dd4b39"><b>Transaksi Penjualan</b></font><br>
+<!--                        <label label class="col-sm-2 control-label"><a href="#" data-toggle="modal" data-target="#cari"> Cari Barang</a></label>-->
+                            <div class="col-sm-2">
+                            <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
+                            </div>
+                        
+<!--
+                            <div class="col-sm-2">
+                            <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
+                            </div>
+                        
+                            <div class="col-sm-2">
+                            <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
+                            </div>
+-->
 					</div>
 				</div>
                 
