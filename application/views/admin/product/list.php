@@ -30,6 +30,7 @@
 								<thead>
 									<tr>
 										<th>Nama Barang</th>
+                                        <th>Stock</th>
 										<th>Hrg Pokok</th>
 										<th>Hrg Umum</th>
 										<th>hrg Reseller</th>
@@ -43,6 +44,9 @@
 											<?php echo $row->nama_barang ?>
 										</td>
 										<td>
+											<?php echo $row->stock ?>
+										</td>
+                                        <td>
 											<?php echo $row->hrg_pokok ?>
 										</td>
 										<td>
