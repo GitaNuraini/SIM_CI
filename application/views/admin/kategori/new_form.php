@@ -26,80 +26,16 @@
 
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/products/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('admin/kategori_controller/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/product/add') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php base_url('admin/kategori_controller/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
-								<input class="form-control <?php echo form_error('nama_barang') ? 'is-invalid':'' ?>"
-								 type="text" name="name_barang" placeholder="nama barang" />
+								<input class="form-control <?php echo form_error('nama_kategori') ? 'is-invalid':'' ?>"
+								 type="text" name="name_kategori" placeholder="nama kategori" />
 								<div class="invalid-feedback">
-									<?php echo form_error('nama_barang') ?>
-								</div>
-							</div>
-                      
-
-                            
-                            
-                            
-							<div class="form-group">
-				            <select class="form-control" name="category">
-                <option  value="">---pilih kategori---</option>                    
-            <?php foreach($get_kategori as $row) { ?>
-                <option value="<?php echo $row->id_kategori;?>"><?php echo $row->nama_kategori;?></option>
-            <?php } ?>
-        </select>  
-								<div class="invalid-feedback">
-									<?php echo form_error('id_kategori') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('id_satuan') ? 'is-invalid':'' ?>"
-								 type="text" name="id_satuan" placeholder="satuan" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_satuan') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('hrg_pokok') ? 'is-invalid':'' ?>"
-								 type="text" name="hrg_pokok" placeholder="harga pokok" />
-								<div class="invalid-feedback">
-									<?php echo form_error('hrg_pokok') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('hrg_umum') ? 'is-invalid':'' ?>"
-								 type="text" name="hrg_umum" placeholder="harga umum" />
-								<div class="invalid-feedback">
-									<?php echo form_error('hrg_umum') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('hrg_reseller') ? 'is-invalid':'' ?>"
-								 type="text" name="hrg_reseller" placeholder="harga reseller" />
-								<div class="invalid-feedback">
-									<?php echo form_error('hrg_reseller') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('stock') ? 'is-invalid':'' ?>"
-								 type="number" name="stock" min="0" placeholder="stock" />
-								<div class="invalid-feedback">
-									<?php echo form_error('stock') ?>
-								</div>
-							</div>
-                            
-                            <div class="form-group">
-								<input class="form-control <?php echo form_error('expired') ? 'is-invalid':'' ?>"
-								 type="date" name="expired" min="0" placeholder="expired" />
-								<div class="invalid-feedback">
-									<?php echo form_error('expired') ?>
+									<?php echo form_error('nama_kategori') ?>
 								</div>
 							</div>
 

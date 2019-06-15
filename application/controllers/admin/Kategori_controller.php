@@ -19,12 +19,12 @@ class Kategori_controller extends CI_Controller
 
     public function add()
     {
-        $product = $this->product_model;
+        $kategori = $this->kategori_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($kategori->rules());
 
         if ($validation->run()) {
-            $product->save();
+            $kategori->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
@@ -35,16 +35,16 @@ class Kategori_controller extends CI_Controller
     {
         if (!isset($id)) redirect('admin/kategori_controller');
        
-        $product = $this->product_model;
+        $kategori = $this->kategori_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($kategori->rules());
 
         if ($validation->run()) {
-            $product->update();
+            $kategori->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["kategori"] = $product->getById($id);
+        $data["kategori"] = $kategori->getById($id);
         if (!$data["kategori"]) show_404();
         
         $this->load->view("admin/kategori/edit_form", $data);
@@ -54,7 +54,7 @@ class Kategori_controller extends CI_Controller
     {
         if (!isset($id)) show_404();
         
-        if ($this->product_model->delete($id)) {
+        if ($this->kategori_model->delete($id)) {
             redirect(site_url('admin/kategori_controller'));
         }
     }
