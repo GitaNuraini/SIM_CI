@@ -32,7 +32,7 @@ class Kategori_model extends CI_Model
     {
         $post = $this->input->post();
         $this->id_kategori = uniqid();
-        $this->nama_barang = $post["nama_kategori"];
+        $this->nama_kategori = $post["nama_kategori"];
         $this->db->insert($this->_table, $this);
     }
 

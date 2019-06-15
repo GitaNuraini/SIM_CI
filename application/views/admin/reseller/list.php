@@ -21,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/kategori_controller/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+						<a href="<?php echo site_url('admin/reseller_controller/add') ?>"><i class="fas fa-plus"></i> Add New</a>
 					</div>
 					<div class="card-body">
 
@@ -29,23 +29,39 @@
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-                                        <th>Id</th>
-										<th>Nama Kategori</th>
+										<th>Nama Reseller</th>
+                                        <th>Alamat</th>
+                                        <th>Kota</th>
+										<th>Provinsi</th>
+										<th>Kode Pos</th>
+										<th>Telp</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($data_kategori as $row): ?>
+									<?php foreach ($reseller as $row): ?>
 									<tr>
-                                        <td><?php echo $row->id_kategori ?></td>
-										<td>
-											<?php echo $row->nama_kategori ?>
+										<td width="150">
+											<?php echo $row->nama_reseller ?>
 										</td>
-								
+										<td>
+											<?php echo $row->alamat ?>
+										</td>
+                                        <td>
+											<?php echo $row->kota ?>
+										</td>
+                                        <td>
+											<?php echo $row->provinsi ?>
+										</td>
+										<td>
+											<?php echo $row->kode_pos ?>
+										</td>
+										<td>
+											<?php echo $row->telp ?></td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/kategori_controller/edit/'.$row->id_kategori) ?>"
+											<a href="<?php echo site_url('admin/reseller_controller/edit/'.$row->id_reseller) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/kategori_controller/delete/'.$row->id_kategori) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('admin/reseller_controller/delete/'.$row->id_reseller) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
