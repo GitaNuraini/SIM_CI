@@ -28,12 +28,10 @@
         </button>
       </div>
       <div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
-<!--
       <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
         <a id="btn-delete" class="btn btn-danger" href="#">Delete</a>
       </div>
--->
     </div>
   </div>
 </div>

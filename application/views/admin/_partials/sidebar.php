@@ -14,11 +14,11 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">Data Barang</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">List Product</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">List Product</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">List Product</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">List Product</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">List Product</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Data Kasir</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/kategori_controller') ?>">Data Kategori</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/satuan_controller') ?>">Data Satuan</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/supplier_controller') ?>">Data Supplier</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/reseller_controller') ?>">Data Reseller</a>
         </div>
     </li>
     <li class="nav-item">
