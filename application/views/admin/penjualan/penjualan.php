@@ -19,7 +19,43 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-body">
-penjualan
+                            penjualan
+					</div>
+				</div>
+                
+                
+                <div class="card mb-3">
+					<div class="card-body">
+                        						<div class="table-responsive">
+							<table class="table table-hover table-bordered mt-3">
+								<thead>
+									<tr>
+										<th>No</th>
+                                        <th>Nama Barang</th>
+                                        <th>Jumlah</th>
+										<th>Harga (Rp)</th>
+										<th>Sub Total</th>
+										<th>Aksi</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+                                        <td colspan="4" align="right"><b>Total Belanja(Rp)</b></td>
+                                        <td></td>
+                                        <td></td>
+									</tr>
+                                    
+                                    <tr>
+                                        <td colspan="4" align="right"><b>Uang Bayar(Rp)</b></td>
+                                        <td><input class="form-control" requered type="text" name="bayar"></td>
+                                        <td></td>
+									</tr>
+									
+
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 

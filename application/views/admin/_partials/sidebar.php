@@ -43,14 +43,14 @@
             <span>Laporan</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('admin/products') ?>">Laporan Barang</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Kasir</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Kategori</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Satuan</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Supplier</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Reseller</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan Penjualan</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/kasir_controller') ?>">Laporan piutang</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller') ?>">Laporan Barang</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/kasir') ?>">Laporan Kasir</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/kategori') ?>">Laporan Kategori</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/satuan') ?>">Laporan Satuan</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/supplier') ?>">Laporan Supplier</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/reseller') ?>">Laporan Reseller</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/penjualan') ?>">Laporan Penjualan</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/laporan_controller/piutang') ?>">Laporan piutang</a>
         </div>
     </li>
     
