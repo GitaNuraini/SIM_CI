@@ -37,14 +37,6 @@
 							<input type="hidden" name="id_satuan" value="<?php echo $satuan->id_satuan?>" />
 
 							<div class="form-group">
-								<label for="name">Nama Satuan</label>
-								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Product name" value="<?php echo $satuan->nama_satuan ?>" />
-						<form action="<?php base_url('admin/satuan_cotroller/edit') ?>" method="post" enctype="multipart/form-data">
-
-							<input type="hidden" name="id" value="<?php echo $satuan->id_satuan?>" />
-
-							<div class="form-group">
 								<label for="name">Nama Satuan*</label>
 								<input class="form-control <?php echo form_error('nama_satuan') ? 'is-invalid':'' ?>"
 								 type="text" name="nama_satuan" placeholder="Nama satuan" value="<?php echo $satuan->nama_satuan ?>" />
@@ -58,10 +50,6 @@
 								<input class="form-control <?php echo form_error('keterangan') ? 'is-invalid':'' ?>"
 								 type="text" name="keterangan" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
 								<div class="invalid-feedback">
-									<?php echo form_error('keterangan') ?>
-								 type="number" name="keterangan" min="0" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
-								<div class="invalid-feedback">
-									<?php echo form_error('price') ?>
 								</div>
 							</div>
 
