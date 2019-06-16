@@ -32,8 +32,6 @@
 							Back</a>
 					</div>
 					<div class="card-body">
-
-<<<<<<< HEAD
 						<form action="<?php base_url('admin/satuan_controller/edit') ?>" method="post" enctype="multipart/form-data">
 
 							<input type="hidden" name="id_satuan" value="<?php echo $satuan->id_satuan?>" />
@@ -42,7 +40,6 @@
 								<label for="name">Nama Satuan</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
 								 type="text" name="name" placeholder="Product name" value="<?php echo $satuan->nama_satuan ?>" />
-=======
 						<form action="<?php base_url('admin/satuan_cotroller/edit') ?>" method="post" enctype="multipart/form-data">
 
 							<input type="hidden" name="id" value="<?php echo $satuan->id_satuan?>" />
@@ -51,7 +48,6 @@
 								<label for="name">Nama Satuan*</label>
 								<input class="form-control <?php echo form_error('nama_satuan') ? 'is-invalid':'' ?>"
 								 type="text" name="nama_satuan" placeholder="Nama satuan" value="<?php echo $satuan->nama_satuan ?>" />
->>>>>>> dc62850f20e0d88a8101d3a5855e2591c5505977
 								<div class="invalid-feedback">
 									<?php echo form_error('nama_satuan') ?>
 								</div>
@@ -60,15 +56,12 @@
 							<div class="form-group">
 								<label for="price">Keterangan</label>
 								<input class="form-control <?php echo form_error('keterangan') ? 'is-invalid':'' ?>"
-<<<<<<< HEAD
 								 type="text" name="keterangan" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('keterangan') ?>
-=======
 								 type="number" name="keterangan" min="0" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('price') ?>
->>>>>>> dc62850f20e0d88a8101d3a5855e2591c5505977
 								</div>
 							</div>
 
