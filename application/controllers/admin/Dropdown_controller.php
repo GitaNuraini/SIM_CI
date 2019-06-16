@@ -8,13 +8,13 @@ class Dropdown_controller extends CI_Controller {
  }
 
  public function index(){
- $data=["kategori"] = $this->Dropdown_model->get_kategori();
- $this->load->view('admin/product/new_form', var_dump$data); die;
+ $data["kategori"] = $this->Dropdown_model->get_kategori();
+ $this->load->view('admin/product/new_form', $data);
  }
     
  public function satuan(){
- $data=["satuan"] = $this->Dropdown_model->get_satuan();
- $this->load->view('admin/product/new_form', var_dump$data); die;
+ $data["satuan"] = $this->Dropdown_model->get_satuan();
+ $this->load->view('admin/product/new_form', $data;
  }
     
 }

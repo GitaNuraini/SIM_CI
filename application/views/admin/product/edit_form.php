@@ -35,45 +35,71 @@
 
 						<form action="<?php base_url('admin/product/edit') ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="id" value="<?php echo $product->product_id?>" />
+							<input type="hidden" name="id" value="<?php echo $product->id_barang?>" />
 
 							<div class="form-group">
-								<label for="name">Name*</label>
+								<label for="nama_barang">Nama Barang</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Product name" value="<?php echo $product->name ?>" />
+								 type="text" name="name" placeholder="Product name" value="<?php echo $product->nama_barang ?>" />
 								<div class="invalid-feedback">
-									<?php echo form_error('name') ?>
+									<?php echo form_error('nama_barang') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="price">Price</label>
-								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Product price" value="<?php echo $product->price ?>" />
+								<label for="stock">Stock</label>
+								<input class="form-control <?php echo form_error('stock') ? 'is-invalid':'' ?>"
+								 type="number" name="stock" min="0" placeholder="stock" value="<?php echo $product->stock ?>" />
 								<div class="invalid-feedback">
-									<?php echo form_error('price') ?>
+									<?php echo form_error('stock') ?>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label for="kategori">Kategori</label>
+								<input class="form-control <?php echo form_error('kategori') ? 'is-invalid':'' ?>"
+								 type="text" name="kategori" placeholder="satuan" value="<?php echo $product->id_kategori ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('kategori') ?>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label for="satuan">Satuan</label>
+								<input class="form-control <?php echo form_error('satuan') ? 'is-invalid':'' ?>"
+								 type="text" name="satuan" placeholder="satuan" value="<?php echo $product->id_satuan ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('satuan') ?>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label for="hrg_pokok">Harga Pokok(Rp)</label>
+								<input class="form-control <?php echo form_error('hrg_pokok') ? 'is-invalid':'' ?>"
+								 type="text" name="hrg_pokok" placeholder="hrg_pokok" value="<?php echo $product->hrg_pokok ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('hrg_pokok') ?>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label for="hrg_umum">Harga Umum(Rp)</label>
+								<input class="form-control <?php echo form_error('hrg_umum') ? 'is-invalid':'' ?>"
+								 type="text" name="hrg_umum" placeholder="hrg_umum" value="<?php echo $product->hrg_umum ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('hrg_umum') ?>
+								</div>
+							</div>
+                            
+                            <div class="form-group">
+								<label for="hrg_reseller">Harga Reseller(Rp)</label>
+								<input class="form-control <?php echo form_error('hrg_reseller') ? 'is-invalid':'' ?>"
+								 type="text" name="hrg_reseller" placeholder="hrg_reseller" value="<?php echo $product->hrg_reseller ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('hrg_reseller') ?>
 								</div>
 							</div>
 
-
-							<div class="form-group">
-								<label for="name">Photo</label>
-								<input class="form-control-file <?php echo form_error('image') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
-								<input type="hidden" name="old_image" value="<?php echo $product->image ?>" />
-								<div class="invalid-feedback">
-									<?php echo form_error('image') ?>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="name">Description*</label>
-								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
-								 name="description" placeholder="Product description..."><?php echo $product->description ?></textarea>
-								<div class="invalid-feedback">
-									<?php echo form_error('description') ?>
-								</div>
-							</div>
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>

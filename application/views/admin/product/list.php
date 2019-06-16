@@ -31,6 +31,7 @@
 									<tr>
 										<th>Nama Barang</th>
                                         <th>Stock</th>
+                                        <th>Kategori</th>
                                         <th>Satuan</th>
 										<th>Hrg Pokok</th>
 										<th>Hrg Umum</th>
@@ -46,6 +47,9 @@
 										</td>
 										<td>
 											<?php echo $row->stock ?>
+										</td>
+                                        <td>
+											<?php echo $row->id_kategori ?>
 										</td>
                                         <td>
 											<?php echo $row->id_satuan ?>

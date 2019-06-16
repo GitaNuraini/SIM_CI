@@ -20,20 +20,25 @@
 				<div class="card mb-3">
 					<div class="card-body">
                         <font size="5px" color="dd4b39"><b>Transaksi Penjualan</b></font><br>
-<!--                        <label label class="col-sm-2 control-label"><a href="#" data-toggle="modal" data-target="#cari"> Cari Barang</a></label>-->
-                            <div class="col-sm-2">
+                        <!--cari barang-->
+                            <label label class="col-sm-2 control-label"><a href="#" data-toggle="modal" data-target="#cari"> Nama Barang :</a></label>
+                            <div class="col-sm-6">
                             <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
                             </div>
-                        
-<!--
-                            <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
+                          <!--cari reseller-->
+                            <label label class="col-sm-2 control-label"><a href="#" data-toggle="modal" data-target="#cari"> Nama Reseller :</a></label>
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="cari Reseller" name="nama_reseller" value="">
                             </div>
-                        
-                            <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="cari barang" name="nama_barang" value="">
+                          <!--jumlah barang-->
+                            <label label class="col-sm-2 control-label"><a href="#" data-toggle="modal" data-target="#cari"> Jumlah Barang :</a></label>
+                            <div class="col-sm-6">
+                            <input type="number" min="0" class="form-control" placeholder="0" name="jumlah" value="">
                             </div>
--->
+                        <br>
+                        <div class="col-sm-2">
+                        <input type="submit" value="tambah">
+                        </div>
 					</div>
 				</div>
                 
@@ -64,6 +69,12 @@
                                         <td colspan="4" align="right"><b>Uang Bayar(Rp)</b></td>
                                         <td><input class="form-control" requered type="text" name="bayar"></td>
                                         <td></td>
+									</tr>
+                                    
+                                    <tr>
+                                        <td colspan="4" align="right"><b>Jatuh Tempo</b></td>
+                                        <td><input class="form-control" requered type="date" name="bayar"></td>
+                                        <td><button type="submit" name="simpan" class="btn btn-block btn-danger">Simpan</button></td>
 									</tr>
 									
 
