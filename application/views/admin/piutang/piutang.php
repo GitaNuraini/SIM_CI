@@ -20,47 +20,48 @@
 
 				<!-- DataTables -->
 				<div class="card mb-3">
-					<div class="card-body">
-
-<!--
+				    <div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-										<th>Nama Kasir</th>
-                                        <th>Alamat</th>
-                                        <th>Telepon</th>
-										<th>posisi</th>
-										<th>Username</th>
-										<th>Password</th>
+										<th>No Nota</th>
+                                        <th>Tgl Nota</th>
+                                        <th>Reseller</th>
+                                        <th>Total Belanja</th>
+										<th>Kekurangan</th>
+										<th>Status</th>
+										<th>Tempo</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($kasir as $row): ?>
+									<?php foreach ($join3 as $row): ?>
 									<tr>
 										<td width="150">
-											<?php echo $row->nama_kasir ?>
+											<?php echo $row->nota_penjualan ?>
 										</td>
 										<td>
-											<?php echo $row->alamat?>
+											<?php echo $row->tgl_jual ?>
 										</td>
                                         <td>
-											<?php echo $row->telp ?>
+											<?php echo $row->nama_reseller ?>
 										</td>
                                         <td>
-											<?php echo $row->posisi ?>
+											<?php echo $row->id_satuan ?>
 										</td>
                                         <td>
-											<?php echo $row->username ?>
+											<?php echo $row->hrg_pokok ?>
 										</td>
 										<td>
-											<?php echo $row->password ?>
+											<?php echo $row->hrg_umum ?>
 										</td>
+										<td class="small">
+											<?php echo $row->hrg_reseller ?></td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/kasir_controller/edit/'.$row->id_kasir) ?>"
+											<a href="<?php echo site_url('admin/products/edit/'.$row->id_barang) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/kasir_controller/delete/'.$row->id_kasir) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$row->id_barang) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
@@ -69,7 +70,6 @@
 								</tbody>
 							</table>
 						</div>
--->
 					</div>
 				</div>
 
