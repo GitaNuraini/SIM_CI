@@ -19,33 +19,37 @@ class Satuan_controller extends CI_Controller
 
     public function add()
     {
-        $product = $this->product_model;
+        $satuan = $this->satuan_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($satuan->rules());
 
         if ($validation->run()) {
-            $product->save();
+            $satuan->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         $this->load->view("admin/satuan/new_form");
     }
 
-    public function edit($id = null)
+    public function edit($id_satuan = null)
     {
-        if (!isset($id)) redirect('admin/satuan_controller');
+        if (!isset($id_satuan)) redirect('admin/satuan_controller');
        
-        $product = $this->product_model;
+        $satuan = $this->satuan_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($satuan->rules());
 
         if ($validation->run()) {
-            $product->update();
+            $satuan->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["product"] = $product->getById($id);
-        if (!$data["product"]) show_404();
+<<<<<<< HEAD
+        $data["satuan"] = $satuan->getById($id_satuan);
+=======
+        $data["satuan"] = $product->getById($id);
+>>>>>>> dc62850f20e0d88a8101d3a5855e2591c5505977
+        if (!$data["satuan"]) show_404();
         
         $this->load->view("admin/satuan/edit_form", $data);
     }

@@ -28,50 +28,47 @@
 				<div class="card mb-3">
 					<div class="card-header">
 
-						<a href="<?php echo site_url('admin/products/') ?>"><i class="fas fa-arrow-left"></i>
+						<a href="<?php echo site_url('admin/satuan_controller/') ?>"><i class="fas fa-arrow-left"></i>
 							Back</a>
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/product/edit') ?>" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
+						<form action="<?php base_url('admin/satuan_controller/edit') ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="id" value="<?php echo $product->product_id?>" />
+							<input type="hidden" name="id_satuan" value="<?php echo $satuan->id_satuan?>" />
 
 							<div class="form-group">
-								<label for="name">Name*</label>
+								<label for="name">Nama Satuan</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Product name" value="<?php echo $product->name ?>" />
+								 type="text" name="name" placeholder="Product name" value="<?php echo $satuan->nama_satuan ?>" />
+=======
+						<form action="<?php base_url('admin/satuan_cotroller/edit') ?>" method="post" enctype="multipart/form-data">
+
+							<input type="hidden" name="id" value="<?php echo $satuan->id_satuan?>" />
+
+							<div class="form-group">
+								<label for="name">Nama Satuan*</label>
+								<input class="form-control <?php echo form_error('nama_satuan') ? 'is-invalid':'' ?>"
+								 type="text" name="nama_satuan" placeholder="Nama satuan" value="<?php echo $satuan->nama_satuan ?>" />
+>>>>>>> dc62850f20e0d88a8101d3a5855e2591c5505977
 								<div class="invalid-feedback">
-									<?php echo form_error('name') ?>
+									<?php echo form_error('nama_satuan') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="price">Price</label>
-								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Product price" value="<?php echo $product->price ?>" />
+								<label for="price">Keterangan</label>
+								<input class="form-control <?php echo form_error('keterangan') ? 'is-invalid':'' ?>"
+<<<<<<< HEAD
+								 type="text" name="keterangan" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
+								<div class="invalid-feedback">
+									<?php echo form_error('keterangan') ?>
+=======
+								 type="number" name="keterangan" min="0" placeholder="keterangan" value="<?php echo $satuan->keterangan ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('price') ?>
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<label for="name">Photo</label>
-								<input class="form-control-file <?php echo form_error('image') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
-								<input type="hidden" name="old_image" value="<?php echo $product->image ?>" />
-								<div class="invalid-feedback">
-									<?php echo form_error('image') ?>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="name">Description*</label>
-								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
-								 name="description" placeholder="Product description..."><?php echo $product->description ?></textarea>
-								<div class="invalid-feedback">
-									<?php echo form_error('description') ?>
+>>>>>>> dc62850f20e0d88a8101d3a5855e2591c5505977
 								</div>
 							</div>
 

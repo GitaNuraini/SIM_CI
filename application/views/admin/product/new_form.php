@@ -38,29 +38,32 @@
 									<?php echo form_error('nama_barang') ?>
 								</div>
 							</div>
-                      
-
                             
                             
-                            
-							<div class="form-group">
-				            <select class="form-control" name="category">
-                <option  value="">---pilih kategori---</option>                    
-            <?php foreach($get_kategori as $row) { ?>
-                <option value="<?php echo $row->id_kategori;?>"><?php echo $row->nama_kategori;?></option>
-            <?php } ?>
-        </select>  
-								<div class="invalid-feedback">
-									<?php echo form_error('id_kategori') ?>
-								</div>
-							</div>
+				<div class="form-group">
+				    <select class="form-control" name="kategori">
+                    <option>---pilih kategori---</option>                    
+                    <?php foreach($kategori as $row) :?>
+                    <option value="<?php echo $row->id_kategori ?>"><?php echo $row->nama_kategori ?></option>
+                    <?php endforeach; ?>
+                        
+                    </select>  
+                        <div class="invalid-feedback">
+				        <?php echo form_error('id_kategori') ?>
+				        </div>
+                </div>
                             
                             <div class="form-group">
-								<input class="form-control <?php echo form_error('id_satuan') ? 'is-invalid':'' ?>"
-								 type="text" name="id_satuan" placeholder="satuan" />
-								<div class="invalid-feedback">
-									<?php echo form_error('id_satuan') ?>
-								</div>
+								<select class="form-control" name="satuan">
+                    <option>---pilih satuan---</option>                    
+                    <?php foreach($satuan as $row) :?>
+                    <option value="<?php echo $row->id_satuan ?>"><?php echo $row->nama_satuan ?></option>
+                    <?php endforeach; ?>
+                        
+                    </select>  
+                        <div class="invalid-feedback">
+				        <?php echo form_error('id_kategori') ?>
+				        </div>
 							</div>
                             
                             <div class="form-group">

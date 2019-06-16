@@ -24,16 +24,16 @@ class Satuan_model extends CI_Model
         return $this->db->get($this->_table)->result();
     }
     
-    public function getById($id)
+    public function getById($id_satuan)
     {
-        return $this->db->get_where($this->_table, ["id_satuan" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_satuan" => $id_satuan])->row();
     }
 
     public function save()
     {
         $post = $this->input->post();
-        $this->id_kategori = uniqid();
-        $this->nama_barang = $post["nama_satuan"];
+        $this->id_satuan = uniqid();
+        $this->nama_satuan = $post["nama_satuan"];
         $this->keterangan = $post["keterangan"];
         $this->db->insert($this->_table, $this);
     }

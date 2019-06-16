@@ -28,7 +28,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <i class="fa fa-th"></i>
-            <span>Penjualan</span>
+            <span>Transaksi</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo site_url('admin/penjualan_controller') ?>">Penjualan</a>

@@ -19,12 +19,12 @@ class Reseller_controller extends CI_Controller
 
     public function add()
     {
-        $product = $this->product_model;
+        $reseller = $this->reseller_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($reseller->rules());
 
         if ($validation->run()) {
-            $product->save();
+            $reseller->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
@@ -35,16 +35,16 @@ class Reseller_controller extends CI_Controller
     {
         if (!isset($id)) redirect('admin/reseller_controller');
        
-        $product = $this->product_model;
+        $reseller = $this->reseller_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($reseller->rules());
 
         if ($validation->run()) {
-            $product->update();
+            $reseller->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["reseller"] = $product->getById($id);
+        $data["reseller"] = $reseller->getById($id);
         if (!$data["reseller"]) show_404();
         
         $this->load->view("admin/reseller/edit_form", $data);
@@ -54,7 +54,7 @@ class Reseller_controller extends CI_Controller
     {
         if (!isset($id)) show_404();
         
-        if ($this->product_model->delete($id)) {
+        if ($this->reseller_model->delete($id)) {
             redirect(site_url('admin/reseller_controller'));
         }
     }

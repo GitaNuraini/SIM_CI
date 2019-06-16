@@ -19,12 +19,12 @@ class Supplier_controller extends CI_Controller
 
     public function add()
     {
-        $product = $this->product_model;
+        $supplier = $this->supplier_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($supplier->rules());
 
         if ($validation->run()) {
-            $product->save();
+            $supplier->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
@@ -35,16 +35,16 @@ class Supplier_controller extends CI_Controller
     {
         if (!isset($id)) redirect('admin/supplier_controller');
        
-        $product = $this->product_model;
+        $supplier = $this->supplier_model;
         $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
+        $validation->set_rules($supplier->rules());
 
         if ($validation->run()) {
-            $product->update();
+            $supplier->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["supplier"] = $product->getById($id);
+        $data["supplier"] = $supplier->getById($id);
         if (!$data["supplier"]) show_404();
         
         $this->load->view("admin/supplier/edit_form", $data);
@@ -54,7 +54,7 @@ class Supplier_controller extends CI_Controller
     {
         if (!isset($id)) show_404();
         
-        if ($this->product_model->delete($id)) {
+        if ($this->supplier_model->delete($id)) {
             redirect(site_url('admin/supplier_controller'));
         }
     }
