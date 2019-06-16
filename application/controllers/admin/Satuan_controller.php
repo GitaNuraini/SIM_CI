@@ -44,7 +44,7 @@ class Satuan_controller extends CI_Controller
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["satuan"] = $product->getById($id);
+        $data["satuan"] = $satuan->getById($id);
         if (!$data["satuan"]) show_404();
         
         $this->load->view("admin/satuan/edit_form", $data);
