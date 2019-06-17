@@ -84,10 +84,10 @@
 <div class="container" style="margin-top: 50px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Masuk Administrator</h1>
+            <h1 class="text-center login-title">.L.O.G.I.N.</h1>
             <?php if(isset($error)) { echo $error; }; ?>
             <div class="account-wall">
-                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                <img class="profile-img" src="https://dcassetcdn.com/design_img/2372770/465571/465571_12379100_2372770_c407f50f_image.jpg?sz=250"
                     alt="">    
                 <form class="form-signin" method="POST" action="<?php echo base_url() ?>index.php/login">
                 <div class="form-group">
@@ -99,17 +99,12 @@
                     <?php echo form_error('password'); ?>
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block" name="btn-login" id="btn-login" type="submit">
+                <button class="btn btn-lg btn-success btn-block" name="btn-login" id="btn-login" type="submit">
                     Masuk</button>
 
-                <label class="checkbox pull-left">
-                    <input type="checkbox" value="remember-me">
-                    Ingatkan Saya
-                </label>
-                <a href="#" class="pull-right need-help">Butuh bantuan? </a><span class="clearfix"></span>
+                <span class="clearfix"></span>
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Buat Akun </a>
             <div id="error" style="margin-top: 10px"></div>
         </div>
     </div>
