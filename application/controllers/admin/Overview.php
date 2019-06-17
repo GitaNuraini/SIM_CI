@@ -11,4 +11,10 @@ class Overview extends CI_Controller {
         // load view admin/overview.php
         $this->load->view("admin/overview");
 	}
+    
+    public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('login');
+	}
 }

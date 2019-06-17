@@ -36,7 +36,7 @@
 				</div>
 				<div class="mr-5">Transaksi Penjualan</div>
 				</div>
-				<a class="card-footer text-white clearfix small z-1" href="#">
+				<a class="card-footer text-white clearfix small z-1" href="penjualan_controller">
 				<span class="float-left">View Details</span>
 				<span class="float-right">
 					<i class="fas fa-angle-right"></i>
@@ -52,7 +52,7 @@
 				</div>
 				<div class="mr-5">Transaksi Piutang</div>
 				</div>
-				<a class="card-footer text-white clearfix small z-1" href="">
+				<a class="card-footer text-white clearfix small z-1" href="piutang_controller">
 				<span class="float-left">View Details</span>
 				<span class="float-right">
 					<i class="fas fa-angle-right"></i>
@@ -61,7 +61,10 @@
 			</div>
 			</div>
 		</div>
-
+            <br>
+            <div class="navbar-form navbar-right">
+				<a href="<?php echo base_url() ?>index.php/admin/overview/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
+        	</div>
 		</div>
 		<!-- /.container-fluid -->
 
